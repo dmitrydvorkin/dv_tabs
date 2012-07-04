@@ -2,9 +2,9 @@ name: Dv Tabs
 author: dvorkin
 category: Interface
 tags: [interface]
-#docs: http://dv.tibbo.com/dv_tabs/README.md
-#demo: http://dv.tibbo.com/dv_tabs/Docs/demo.html
-#current: 1.2
+docs: http://dv.tibbo.com/dv_tabs/README.md
+demo: http://dv.tibbo.com/dv_tabs/Docs/demo.html
+current: 1.2
 
 authors:
  - Dvorkin Dmitry
