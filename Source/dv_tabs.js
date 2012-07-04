@@ -1,4 +1,15 @@
-/* Dv tabs */
+/*
+---
+description: Well-indexed simple css/js tabs using mootools.
+
+license: GPL
+
+authors:
+- JS by Dmitry Dvorkin
+- css by Leonid Polyakov
+
+*/
+
 function tab_activate( _idt, _idd) {
  var sfx = _idt + '_' + _idd;
  $$('li[id^=tabh_' + _idt + ']').each(function( _vli, _kli){
