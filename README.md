@@ -5,6 +5,8 @@ Draws tabs using small mootools dcript and CSS only.
 No images, just styled UL, LI and DIVs.
 Simple markup.
 
+[Demo](http://dv.tibbo.com/dv_tabs/)
+
 ![Screenshot](http://dv.tibbo.com/dv_tabs/dv_tabs.png)
 
 How to use
