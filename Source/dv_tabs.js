@@ -5,9 +5,15 @@ description: Well-indexed simple css/js tabs using mootools.
 license: GPL
 
 authors:
-- JS by Dmitry Dvorkin
-- css by Leonid Polyakov
+ - JS by Dmitry Dvorkin
+ - css by Leonid Polyakov
 
+provides: [dv_tabs]
+
+requires:
+ - core/1.4.5
+
+...
 */
 
 function tab_activate( _idt, _idd) {
