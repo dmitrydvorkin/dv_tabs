@@ -16,14 +16,18 @@ requires:
 ...
 */
 
-function tab_activate( _idt, _idd) {
+function tab_activate( _P, _idt, _idd) {
  var sfx = _idt + '_' + _idd;
- $$('li[id^=tabh_' + _idt + ']').each(function( _vli, _kli){
+ var ids = 'li[id^=tabh_' + _idt + ']';
+ var els = ( _P ? _P.getElements( ids) : $$(ids));
+ els.each(function( _vli, _kli){
    var cl = 'new_tab';
    if ( _vli.id == 'tabh_' + sfx) cl = 'new_tab_acted';
    _vli.set( 'class', cl);
  });
- $$('div[id^=tabd_' + _idt + ']').each(function( _vd, _kd){
+ var ids = 'div[id^=tabd_' + _idt + ']';
+ var els = ( _P ? _P.getElements( ids) : $$(ids));
+ els.each(function( _vd, _kd){
    var st = 'none';
    if ( _vd.id == 'tabd_' + sfx) st = 'block';
    _vd.setStyle( 'display', st);
@@ -41,10 +45,11 @@ function tab_setup( _P) {
      _vli.set( 'class', 'new_tab');
      if ( _kli == 0) _vli.setStyle( 'margin-left', 0);
      // attach onclick event
+     var P = _P;
      _vli.addEvent( 'click', function( _e){
        var xa = this.id.split( '_');
        if ( xa.length < 3) return;
-       tab_activate( xa[ 1], xa[ 2]);
+       tab_activate( P, xa[ 1], xa[ 2]);
      });
    });
  });
@@ -55,7 +60,7 @@ function tab_setup( _P) {
      _vd.set( 'id', 'tabd_' + t_id + '_' + _kd);
      _vd.setStyle( 'display', 'none');
    });
-   tab_activate( _kf, 0);
+   tab_activate( _P, _kf, 0);
  });
 }
 
