@@ -14,6 +14,11 @@ How to use
 In head:
 
 	<script type="text/javascript" language="javascript" src="dv_tabs/dv_tabs.js"></script>
+	<script type="text/javascript">
+	window.addEvent('domready',function() {
+	 tab_setup();
+	});
+	</script>
 
 In body:
 

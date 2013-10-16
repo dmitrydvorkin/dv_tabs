@@ -63,7 +63,3 @@ function tab_setup( _P) {
    tab_activate( _P, _kf, 0);
  });
 }
-
-window.addEvent('domready',function() {
- tab_setup();
-});
