@@ -47,6 +47,7 @@ function tab_setup( _P) {
      // attach onclick event
      var P = _P;
      _vli.addEvent( 'click', function( _e){
+       _e.stop()
        var xa = this.id.split( '_');
        if ( xa.length < 3) return;
        tab_activate( P, xa[ 1], xa[ 2]);
